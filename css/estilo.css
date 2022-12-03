@@ -1,0 +1,33 @@
+body{
+    font-family: Calibri;
+    padding: 10px 20px;
+	background-color: #d9f5efa8;
+}
+
+h1 {
+	color: #FFFFFF;
+	background-color: #ff9633;
+	padding: 10px 20px;
+	border-radius:0 20px;
+}
+/* a.disabled{
+	display: none;
+	cursor: default;
+} */
+
+h2{
+	color: #0e0d0d;
+	background: #1e07e9c7;
+	padding: 10px 20px;
+	border-radius:0 20px;
+	width: 172%;
+	height: 100px;
+}
+p{ 
+	color: #494040;
+	background-color: #19e3f1;
+	padding: 10px 20px;
+	border-radius:0 20px;
+	width: 172%;
+	
+}

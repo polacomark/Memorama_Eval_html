@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <title>Evaluación Final</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<script>
+    function iniciar(){
+edad=document.getElementById("miedad");
+edad.addEventListener("change", cambiarrango, false);
+
+}
+function cambiarrango(){
+var salida=document.getElementById("rango");
+var calc=edad.value-20;
+if(calc<20){
+calc=0;
+edad.value=20;
+}
+salida.innerHTML=calc+' a '+edad.value;
+}
+
+
+window.addEventListener("load", iniciar, false);
+
+</script>
+<body>
+	
+		<h1>Evaluación Final Integradora</h1>
+        <div class="col-lg-7 text-center text-lg-start">
+            <h2 class="col-md-30">¡Bienvenidos al formulario de ingrso del juego de memoria de la  UTN!</h1>
+            <p >esta aplicación Web es un ejemplo de formulario utilizando un trabajo anterior, una vez que el usuario completa los campos se habilita el boton para poder ingresar a la pagina de juegos.</p>
+          </div>
+        <di class="container">
+            <form action=""  class="row g-3">
+                <div class="col-7">
+                    <label for="nameId" class="form-label">Nombre Completo</label>
+                    <input type="text" name="usu" id="usu" 
+                     required>
+                     <div class="valid-feedback">
+                        ingreso correcto
+                    </div>
+                    <div class="invalid-feedback">
+                        es necesario completar en campo
+                    </div>
+                </div>
+              
+                <div class="col-7">
+                    <label for="nameId" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                 <div class="col-7">
+                    <label for="nameId" class="form-label">Selecciones su rango de edad</label>
+                    <input class="form-control" type="range" name="miedad" id="miedad" min="0"
+                        max="80" step="20" value="20">
+                        <output id="rango">0 a 20</output>
+                 </div>
+                <div class="col-7">
+                    <select name="" class="form-control" id="select"> 
+                        <option value="">Seleccione una opcion</option>
+                        <option value="1">Alumno de la UTN</option>
+                        <option value="2">Alumno invitado</option>
+                    </select><br><br>
+                </div>
+                  
+                 <a  href="pagina2.html" >
+                    <input class="btn btn-primary col-4" 
+                    type="href"  id="btn"
+                    name="ingresar" 
+                    value="ingresar"                                       
+                    disabled
+                    />
+                 </a> 
+                </form>
+        </div>
+       
+        
+        <script src="js/evaluacion.js">
+        </script>
+       
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+           (() => {
+           'use strict'
+       
+           // Fetch all the forms we want to apply custom Bootstrap validation styles to
+           const forms = document.querySelectorAll('.needs-validation')
+       
+           // Loop over them and prevent submission
+           Array.from(forms).forEach(form => {
+               form.addEventListener('submit', event => {
+               if (!form.checkValidity()) {
+                   event.preventDefault()
+                   event.stopPropagation()
+               }
+       
+               form.classList.add('was-validated')
+               }, false)
+           })
+           })()
+           </script>
+</body>
+</html>
